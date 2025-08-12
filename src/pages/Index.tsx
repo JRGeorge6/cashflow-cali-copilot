@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -9,8 +9,8 @@ import SchedulerModal from "@/components/SchedulerModal";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
-  const canonical = useMemo(() => (typeof window !== "undefined" ? window.location.origin + location.pathname : ""), [location.pathname]);
+  const canonical = typeof window !== "undefined" ? window.location.href : "";
+
 
   const faq = [
     {
