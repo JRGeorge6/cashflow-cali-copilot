@@ -8,9 +8,10 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const helmetContext: Record<string, unknown> = {};
 
 const App = () => (
-  <HelmetProvider>
+  <HelmetProvider context={helmetContext}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
