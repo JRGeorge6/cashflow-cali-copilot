@@ -51,8 +51,15 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 5.9% 10%;
 
     --sidebar-border: 220 13% 91%;
-
+ 
     --sidebar-ring: 217.2 91.2% 59.8%;
+ 
+    /* Brand additions for premium theme */
+    --brand: 258 90% 66%;
+    --brand-2: 200 95% 50%;
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+    --hero-foreground: 0 0% 100%;
+    --shadow-elegant: 0 12px 30px hsl(var(--brand) / 0.15);
   }
 
   .dark {
