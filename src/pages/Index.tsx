@@ -37,15 +37,18 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Lower Costs & Get Paid Faster | EPI Terminals (CA)</title>
-        <meta name="description" content="Place an EPI terminal with transparent pricing. Lower processing costs, speed checkout, and improve cash flow. California-compliant displays." />
+        <title>Lower Costs & Get Paid Faster | CA Payment Terminals</title>
+        <meta
+          name="description"
+          content="Transparent pricing lowers processing costs, speeds checkout, and improves cash flow. California-compliant displays."
+        />
         {canonical && <link rel="canonical" href={canonical} />}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       <header className="container py-10">
         <nav className="flex items-center justify-between">
-          <div className="text-lg font-semibold">EPI Placement</div>
+          <div className="text-lg font-semibold">CA Payment Terminals</div>
           <Button variant="link" asChild>
             <a href="#contact" aria-label="Have a question? Call us">Have a question? Call us</a>
           </Button>
@@ -61,11 +64,11 @@ const Index = () => {
                 Lower Your Processing Costs. Get Paid Faster.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                Place an EPI terminal with transparent pricing and California-clean displays—installed fast, supported 24/7.
+                Transparent pricing and California-clean displays—installed fast, supported 24/7.
               </p>
               <div className="flex items-center justify-center gap-3">
                 <Button variant="hero" size="lg" onClick={() => setOpen(true)}>
-                  Book a 15-Minute Call
+                  Schedule a Call
                 </Button>
               </div>
             </div>
@@ -115,7 +118,7 @@ const Index = () => {
               </CardContent></Card>
             </div>
             <div className="mt-8 flex justify-center">
-              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Book a 15-Minute Call</Button>
+              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Schedule a Call</Button>
             </div>
           </div>
         </section>
@@ -138,7 +141,7 @@ const Index = () => {
               </CardContent></Card>
             </div>
             <div className="mt-8 flex justify-center">
-              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Book a 15-Minute Call</Button>
+              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Schedule a Call</Button>
             </div>
           </div>
         </section>
@@ -164,7 +167,7 @@ const Index = () => {
               </p>
             </div>
             <div className="mt-8 flex justify-center">
-              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Book a 15-Minute Call</Button>
+              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Schedule a Call</Button>
             </div>
           </div>
         </section>
@@ -187,7 +190,7 @@ const Index = () => {
               </Accordion>
             </div>
             <div className="mt-8 flex justify-center">
-              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Book a 15-Minute Call</Button>
+              <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Schedule a Call</Button>
             </div>
           </div>
         </section>
@@ -195,7 +198,7 @@ const Index = () => {
         {/* Final CTA */}
         <section className="border-t">
           <div className="container py-12 md:py-16 text-center">
-            <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Book a 15-Minute Call</Button>
+            <Button variant="hero" size="lg" onClick={() => setOpen(true)}>Schedule a Call</Button>
             <div id="contact" className="mt-3 text-sm text-muted-foreground">
               Have a question? Call us
             </div>

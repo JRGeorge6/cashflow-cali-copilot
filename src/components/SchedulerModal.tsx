@@ -34,17 +34,19 @@ const SchedulerModal = ({ open, onOpenChange }: SchedulerModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-xl">
         <DialogHeader>
-          <DialogTitle>Book a 15-minute call</DialogTitle>
+          <DialogTitle>Schedule a Call</DialogTitle>
           <DialogDescription>
-            Pick a time or leave your details—we’ll help place your EPI terminal fast.
+            Pick a time or leave your details—we’ll set up your terminal quickly.
           </DialogDescription>
         </DialogHeader>
 
         <div className="grid gap-6">
           <div className="rounded-md border p-4">
-            <div className="aspect-video w-full rounded bg-muted flex items-center justify-center text-sm text-muted-foreground">
-              Your scheduler embed goes here (Calendly, SavvyCal, etc.)
-            </div>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/george-nasir0806/30min"
+              style={{ minWidth: "320px", height: "630px" }}
+            />
           </div>
 
           <div className="text-sm text-muted-foreground">Prefer not to book now? Leave your info:</div>
