@@ -13,6 +13,8 @@ interface SchedulerModalProps {
 const SchedulerModal = ({ open, onOpenChange }: SchedulerModalProps) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
+  // Formspree endpoint for contact form submissions
+  const FORM_ENDPOINT = "https://formspree.io/f/manbzqgl";
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -20,11 +22,21 @@ const SchedulerModal = ({ open, onOpenChange }: SchedulerModalProps) => {
     const data = new FormData(form);
     setSubmitting(true);
     try {
-      // In a real app, send to your backend or Supabase storage
-      console.log("Lead submission:", Object.fromEntries(data.entries()));
-      toast({ title: "Thanks!", description: "We’ll reach out shortly." });
-      form.reset();
-      onOpenChange(false);
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        toast({ title: "Thanks!", description: "We’ll reach out shortly." });
+        form.reset();
+        onOpenChange(false);
+      } else {
+        throw new Error("Network error");
+      }
+    } catch {
+      toast({ title: "Uh oh!", description: "Something went wrong. Please try again." });
     } finally {
       setSubmitting(false);
     }
