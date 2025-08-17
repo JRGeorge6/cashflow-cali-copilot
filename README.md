@@ -71,3 +71,12 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Contact form setup
+
+The scheduler modal uses [Formspree](https://formspree.io/) to deliver submissions directly to your inbox without needing a backend. To enable it:
+
+1. Sign up for a free Formspree account and create a form.
+2. Update the `FORM_ENDPOINT` in `src/components/SchedulerModal.tsx` with your own Formspree form link if you prefer to use a different email.
+
+Formspree will handle emailing you each submission.
